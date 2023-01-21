@@ -15,14 +15,14 @@ INSTALLATION [Termux]
 • git clone https://github.com/GucciferPankaj/Email-Bombing.git
 • cd Email-Bombing
 • chmod +x *
-• bash setup.sh OR python Email-Bombing.py
+• bash setup.sh OR python mail.py
 
 INSTALLATION [Windows]
 
  Download Python & git
 • git clone https://github.com/GucciferPankaj/Email-Bombing.git
 • cd Email-Bombing
-• bash setup.sh OR python Email-Bombing.py
+• bash setup.sh OR python mail.py
 
 INSTALLATION [Kali Linux]
 • sudo apt install python
@@ -30,8 +30,8 @@ INSTALLATION [Kali Linux]
 • sudo apt install git
 • git clone https://github.com/GucciferPankaj/Email-Bombing.git
 • cd Email-Bombing
-• chmod +x
-• python Email-Bombing.py
+• ls
+• python mail.py
 
 
 This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases
